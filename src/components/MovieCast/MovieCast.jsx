@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom'
 
 
 
-const MovieCast = () => {
+function MovieCast () {
   const { movieId } = useParams()
   const [listCast, setListCast] = useState([])
 
@@ -21,12 +21,11 @@ const MovieCast = () => {
 
   return (
     <div>
-      <ul className={s.list}>
-        {listCast.map(e => {
-          return (<li className={s.item} key={e.id}>
-            <img className={s.img} src={`https://image.tmdb.org/t/p/w500${e.profile_path}`} alt="" />
-                  <h3>{e.name}</h3>
-                  <p>{e.character}</p>
+      <ul className={s.list}>{listCast.map(member => {
+          return (<li className={s.item} key={member.id}>
+            <img className={s.img} src={`https://image.tmdb.org/t/p/w500${member.profile_path}`} alt="" />
+                  <h3>{member.name}</h3>
+                  <p>{member.character}</p>
           </li>)
         })}
       </ul>

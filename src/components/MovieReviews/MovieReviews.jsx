@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import {fetchMovieReviews} from "../../services/api"
 
-const MovieReviews = () => {
+function MovieReviews () {
   const { movieId } = useParams()
   const [films, setFilms] = useState([])
 
@@ -16,14 +16,14 @@ const MovieReviews = () => {
      getMoviesSearch()
         }, [movieId]
     )
-    console.log(films);
+    // console.log(films);
 
     if (films.length === 0) {
         return (<h2 className={s.reviews}>Unfortunately, this movie does not have a review</h2>)
     }
   return (
     <div>
-      <ul>
+      <ul className={s.list} >
         {films.map(film => {
           return (<li key={film.id} >
             <h2>{film.author}</h2>
