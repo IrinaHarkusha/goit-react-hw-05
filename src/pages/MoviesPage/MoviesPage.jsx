@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
-import Search from "../../components/Search/Search";
 import { useEffect, useMemo, useState } from "react";
+import Search from "../../components/Search/Search";
 import { fetchMoviesByName } from "../../services/api";
 import MovieList from "../../components/MovieList/MovieList";
 

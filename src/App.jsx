@@ -12,21 +12,21 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'))
 
 
 function App() {
-
   return (
-    <div>
-      <Routes>
-        <Route path='/' element={<Layout/>}>
+    <Routes>
+      
+      <Route path='/' element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path='/movies' element={<MoviesPage />} />
-        <Route path='movies/:movieId' element={<MovieDetailsPage />} />
+        <Route path='movies' element={<MoviesPage />} />
+        <Route path='movies/:movieId' element={<MovieDetailsPage />} >
         <Route path='cast' element={<MovieCast />} />
         <Route path='reviews' element={<MovieReviews />} />
         </Route>
+        </Route>
+      
         
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
-    </div>
   )
 }
 

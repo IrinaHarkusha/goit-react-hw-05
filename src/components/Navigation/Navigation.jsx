@@ -8,7 +8,6 @@ const Navbar = () => {
   }
 
   return (
-    <div>
       <header className={s.navbar}>
         <ul className={s.list}>
           <li className={s.item}>
@@ -20,8 +19,6 @@ const Navbar = () => {
 
         </ul>
       </header>
-      
-    </div>
   )
 }
 

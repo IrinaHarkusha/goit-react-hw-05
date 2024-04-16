@@ -55,7 +55,7 @@ export const MovieDetailsPage = () => {
         <Link className={s.link_a} to="reviews">Reviews</Link>
       </div>
       <div>
-        <Suspense fallback={<h2>Loading, please wait...</h2>}>
+        <Suspense fallback={<h2>Loading...</h2>}>
           <Outlet />
         </Suspense>
       </div>

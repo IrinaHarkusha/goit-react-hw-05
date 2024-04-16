@@ -16,7 +16,7 @@ const MovieReviews = () => {
      getMoviesSearch()
         }, [movieId]
     )
-    // console.log(films);
+    console.log(films);
 
     if (films.length === 0) {
         return (<h2 className={s.reviews}>Unfortunately, this movie does not have a review</h2>)

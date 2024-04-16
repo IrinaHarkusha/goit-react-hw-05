@@ -1,5 +1,5 @@
-import { Link, useLocation } from 'react-router-dom'
 import s from './MovieList.module.css'
+import { Link, useLocation } from 'react-router-dom'
 
 const MovieList = ({ movies }) => {
     const location = useLocation()
