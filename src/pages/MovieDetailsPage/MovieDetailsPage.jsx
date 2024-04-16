@@ -1,6 +1,6 @@
 import s from "./MovieDetailsPage.module.css";
 import { Link, Outlet, useParams, useLocation } from "react-router-dom";
-import { fetchMoviesCast } from "../../services/api";
+import { fetchMoviesDetails } from "../../services/api";
 import { Suspense, useEffect, useRef, useState } from "react";
 
 export const MovieDetailsPage = () => {
@@ -11,7 +11,7 @@ export const MovieDetailsPage = () => {
 
   useEffect(() => {
     async function getMoviesSearch() {
-      const results = await fetchMoviesCast(movieId);
+      const results = await fetchMoviesDetails(movieId);
       setMovie(results);
     }
     getMoviesSearch();

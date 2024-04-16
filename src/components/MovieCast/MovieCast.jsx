@@ -1,18 +1,18 @@
 import s from './MovieCast.module.css'
 import { useState, useEffect } from "react"
 import { fetchMoviesCast } from '../../services/api'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 
 
 function MovieCast () {
   const { movieId } = useParams()
-  const [listCast, setListCast] = useState([])
+  const [castList, setCastList] = useState([])
 
   useEffect(() => {
     async function getMoviesSearch() {
       const data = await fetchMoviesCast(movieId)
-      setListCast(data.cast)
+      setCastList(data.cast)
     }
     getMoviesSearch()
   }, [movieId]
@@ -20,17 +20,16 @@ function MovieCast () {
 
 
   return (
-    <div>
-      <ul className={s.list}>{listCast.map(member => {
-          return (<li className={s.item} key={member.id}>
-            <img className={s.img} src={`https://image.tmdb.org/t/p/w500${member.profile_path}`} alt="" />
-                  <h3>{member.name}</h3>
-                  <p>{member.character}</p>
-          </li>)
+      <ul className={s.list}>
+        {castList.map(e => {
+             return (<li className={s.item} key={e.id}>
+                   <img className={s.img} src={`https://image.tmdb.org/t/p/w500${e.profile_path}`} alt="" />
+                  <h3>{e.name}</h3>
+                  <p>{e.character}</p>
+              </li>)
         })}
       </ul>
       
-    </div>
   )
 }
 

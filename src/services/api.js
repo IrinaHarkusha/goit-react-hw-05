@@ -25,7 +25,7 @@ export const fetchMoviesByName = async (query) => {
     const responce = await axios.get(url, options)
     return responce.data
 }
-export const fetchMoviesCast = async (id) => {
+export const fetchMoviesDetails = async (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}`
     const options = {
         headers: {
@@ -35,7 +35,7 @@ export const fetchMoviesCast = async (id) => {
     const responce = await axios.get(url, options)
     return responce.data
 }
-export const fetchMovieReviews = async (id) => {
+export const fetchMoviesReviews = async (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}/reviews`
     const options = {
         headers: {
@@ -46,7 +46,7 @@ export const fetchMovieReviews = async (id) => {
     return response.data
 }
 
-export const fetchMovieCredits = async (id) => {
+export const fetchMoviesCast = async (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}/credits`
     const options = {
         headers: {

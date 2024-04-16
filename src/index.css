@@ -1,8 +1,9 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: black;
-  
+  background-image: url(https://cdn.pixabay.com/photo/2014/11/30/17/15/theater-551797_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1,
@@ -35,4 +36,7 @@ img {
   text-decoration: none;
   color: white;
 
+}
+h1, h2, h3{
+  color: lightgreen;
 }

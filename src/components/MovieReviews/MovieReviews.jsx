@@ -1,7 +1,7 @@
 import s from './MovieReviews.module.css'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import {fetchMovieReviews} from "../../services/api"
+import {fetchMoviesReviews} from "../../services/api"
 
 function MovieReviews () {
   const { movieId } = useParams()
@@ -9,15 +9,13 @@ function MovieReviews () {
 
   useEffect(() => {
         async function getMoviesSearch() {
-        const reviews = await fetchMovieReviews(movieId)
+        const reviews = await fetchMoviesReviews(movieId)
             setFilms(reviews.results)
         }
 
      getMoviesSearch()
         }, [movieId]
     )
-    // console.log(films);
-
     if (films.length === 0) {
         return (<h2 className={s.reviews}>Unfortunately, this movie does not have a review</h2>)
     }

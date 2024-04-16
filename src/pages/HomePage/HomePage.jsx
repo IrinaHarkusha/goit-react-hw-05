@@ -16,8 +16,8 @@ export const HomePage = () => {
         }, [])
     
   return (
-    <div className={s.wrapper}>
-			<h1>Popular films</h1>
+    <div>
+			<h1 className={s.wrapper}>Popular films</h1>
 			<MovieList movies={popularFilms} />
 		</div>
   )

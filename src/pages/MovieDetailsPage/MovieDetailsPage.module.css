@@ -33,8 +33,9 @@
     align-items: center;
 }
 .title_h{
-    color: white;
+    color: lightgreen;
     font-size: 28px;
+    
 }
 .wrap_div{
     display: flex;

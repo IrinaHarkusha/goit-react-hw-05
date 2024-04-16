@@ -1,6 +1,17 @@
-.not_found{
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  red;
+    font-size: 36px;
 }
-
-h1{
-    color:  white;
+.link{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+}
+.link:hover{
+    font-size: 40px;
+    color: lightgreen;
 }
